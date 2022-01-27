@@ -108,30 +108,32 @@ export default {
 </script>
 
 <style scoped>
-* {
-    background-color: #8fbbaf;
+.container {
+    padding: 50px 0 150px 0;
+    background-color: #8aae92;
 }
 
 .home {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
 }
 
 .text {
     width: 30%;
-    margin-left: 100px;
 }
 
 .text h2 {
     font-family: Montserrat;
     font-weight: 700;
     color: #4b5c4f;
-    font-size: 30px;
+    font-size: 50px;
 
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .map {
@@ -139,7 +141,7 @@ export default {
 }
 
 .map img {
-    max-width: 550px;
+    width: 500px;
 }
 
 .All {
@@ -152,7 +154,7 @@ export default {
 .cityMark {
     width: 4px;
     height: 4px;
-    background-color: black;
+    background-color: red;
     border-radius: 50%;
 }
 
@@ -196,6 +198,63 @@ export default {
     padding: 8px 20px;
 }
 
+@media screen and (max-width: 900px) {
+    .map img {
+        width: 400px;
+    }
+    .container {
+        padding: 50px 0 160px 0;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .map img {
+        width: 300px;
+    }
+    .container {
+        padding: 70px 0 200px 0;
+    }
+    .text h2 {
+        font-size: 35px;
+    }
+    .text p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .map img {
+        width: 400px;
+    }
+    .home {
+        flex-direction: column;
+    }
+    .container {
+        padding: 30px 0 160px 0;
+    }
+    .text {
+        text-align: center;
+        padding-top: 20px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .map img {
+        width: 300px;
+    }
+    .text h2 {
+        font-size: 25px;
+    }
+    .text p {
+        font-size: 15apx;
+    }
+
+    .show {
+        font-size: 10px;
+    }
+}
+
 /*---Cities on map--- */
 .warszawa {
     top: 43%;
@@ -204,7 +263,7 @@ export default {
 
 .radom {
     top: 57%;
-    right: 26%;
+    right: 32%;
 }
 
 .bialystok {
@@ -213,8 +272,8 @@ export default {
 }
 
 .gdansk {
-    top: 12%;
-    right: 52%;
+    top: 11.5%;
+    right: 54%;
 }
 
 .szczecin {
@@ -233,7 +292,7 @@ export default {
 }
 
 .krakow {
-    top: 77%;
-    left: 62%;
+    bottom: 17%;
+    left: 59%;
 }
 </style>

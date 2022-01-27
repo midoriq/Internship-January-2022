@@ -43,4 +43,10 @@ span {
     padding: 60px 0;
     margin: auto;
 }
+
+@media screen and (max-width: 350px) {
+    .info {
+        margin-bottom: 20px;
+    }
+}
 </style>

@@ -58,9 +58,9 @@ export default {
                 Latitude: this.city.latitude,
                 Longitude: this.city.longitude,
             };
-            console.log(newCity);
+            newCity.Name = newCity.Name.charAt(0).toUpperCase() + newCity.Name.slice(1).toLowerCase();
             this.$http.post("http://34.116.152.0/AddCoords", newCity)
-               .then(this.$router.push({ path: "/cities"}));
+              .then(this.$router.push({ path: "/cities"}));
           }
 
         },
@@ -123,5 +123,11 @@ button:hover{
 .error ul li{
      list-style-type: none;
      padding-left: 20px;
+}
+
+@media screen and (max-width: 630px){
+     .container{
+          width: 60%;
+     }
 }
 </style>

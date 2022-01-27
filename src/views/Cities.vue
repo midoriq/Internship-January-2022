@@ -65,12 +65,18 @@ export default {
                 blur.classList.toggle("active");
             }
         },
+        fetchCityList() {
+            fetch("http://34.116.152.0/Cities")
+                .then((res) => res.json())
+                .then((data) => (this.cities = data.Data))
+                .catch((err) => console.log(err.message));
+        },
+    },
+    updated() {
+        this.fetchCityList();
     },
     mounted() {
-        fetch("http://34.116.152.0/Cities")
-            .then((res) => res.json())
-            .then((data) => (this.cities = data.Data))
-            .catch((err) => console.log(err.message));
+        this.fetchCityList();
     },
 };
 </script>
@@ -78,7 +84,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .cities {
-    width: 60%;
+    width: 80%;
     margin: 50px auto 0 auto;
 }
 
@@ -87,7 +93,7 @@ ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 60vh;
+    height: 55vh;
 }
 
 ul li {
@@ -190,5 +196,15 @@ a {
     height: 25px;
 
     cursor: pointer;
+}
+
+@media screen and (max-width: 520px) {
+    .add {
+        font-size: 10px;
+    }
+
+    .cities ul {
+        margin-bottom: 40px;
+    }
 }
 </style>

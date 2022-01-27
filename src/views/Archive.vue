@@ -13,9 +13,9 @@
             <tbody>
                 <tr v-for="archiveItem in archiveTemp" :key="archiveItem.Date">
                     <td>{{ archiveItem.Date }}</td>
-                    <td>{{ archiveItem.Temp }}</td>
-                    <td>{{ archiveItem.Pressure }}</td>
-                    <td>{{ archiveItem.Humidity }}</td>
+                    <td>{{ archiveItem.Temp }}&#8451;</td>
+                    <td>{{ archiveItem.Pressure }}hPa</td>
+                    <td>{{ archiveItem.Humidity }}%</td>
                 </tr>
             </tbody>
         </table>
@@ -122,5 +122,11 @@ table tr:nth-child(even) {
 
 .more {
     margin-right: 40px;
+}
+
+@media screen and (max-width: 400px) {
+    .show {
+        margin-bottom: 10px;
+    }
 }
 </style>
