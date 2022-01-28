@@ -109,8 +109,7 @@ export default {
 
 <style scoped>
 .container {
-    padding: 50px 0 150px 0;
-    background-color: #8aae92;
+    padding: 50px 0 130px 0;
 }
 
 .home {
