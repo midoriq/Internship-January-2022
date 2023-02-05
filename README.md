@@ -1,22 +1,22 @@
-# Praktyki styczeń 2022
+# Internship january 2022
 
-Jest to część frontendowa projektu pogodowego API. Zajmowałam się stworzeniem strony w Vue.Js oraz połączeniem się z backendem.
-Za pomocą aplikacji można zobaczyć pogodę dla największych miast w Polsce, a także dodać własne miejscowości. Jest również opcja zobaczenia archiwum poprzednich pomiarów dla Warszawy.
+This is the front-end part of weather API project. The application allows you to see the weather for the biggest cities in Poland, and add your city. You can also see an archive of previous temperatures. 
+I created a website using Vue.Js that has dynamic routing and is connected with a back-end.
 
-## Odpalenie aplikacji
+## Running application
 
-Aby projekt odpowiednio działał trzeba uruchomić również backendową część, która znajduje się pod linkiem
+For the project to run correctly, you need to run also back-end, you can download it from this link: 
 https://github.com/poneciak57/Backend-Praktyki-2k22
 
-Aby uruchomic projekt nalezy miec pobranego NodeJS.
+You need to download Node.Js and run it by this commands
 
-### Pobranie potrzebnych modułów
+### Install modules
 
 ```
 npm install
 ```
 
-### Uruchomienie aplikacji
+### Run application
 
 ```
 npm run serve
